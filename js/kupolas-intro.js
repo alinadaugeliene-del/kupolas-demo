@@ -33,12 +33,27 @@
       .catch(function () { /* paliekame įprastą src */ });
   }
 
-  video.addEventListener('loadeddata', function () {
+  function onReady() {
+    if (ready) return;
     ready = true;
     video.pause();
     video.classList.add('is-loaded');
     lastTime = -1;
-  });
+  }
+  video.addEventListener('loadeddata', onReady);
+  video.addEventListener('canplay', onReady);
+
+  // iPhone (Safari/Chrome) neįkelia video, kol jis nepaleistas – trumpai paleidžiame ir sustabdome
+  function prime() {
+    video.muted = true;
+    var p = video.play();
+    if (p && p.then) p.then(function () { video.pause(); onReady(); }).catch(function () {});
+  }
+  video.addEventListener('loadedmetadata', prime);
+  video.load();
+  prime();
+  // Jei naršyklė vis tiek blokuoja – paleidžiame po pirmo palietimo
+  window.addEventListener('touchstart', prime, { once: true, passive: true });
 
   function render() {
     if (ready && !video.seeking && video.duration) {

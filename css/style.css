@@ -263,7 +263,8 @@ p { margin: 0 0 1.1em; color: var(--bone-dim); }
 
 /* ---------- 3D intro (slinkimu valdomas) ---------- */
 .kupolas-intro { position: relative; height: 420vh; background: #0b0d0c; }
-.kupolas-intro .kp-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; width: 100%; overflow: hidden; }
+.kupolas-intro .kp-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; width: 100%; overflow: hidden;
+  background: #0b0a10 url("../images/kupolas-poster.jpg") center / cover no-repeat; }
 .kupolas-intro .kp-video {
   position: absolute;
   inset: 0;
