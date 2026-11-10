@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kupolas.lt/index.html</loc></url>
-  <url><loc>https://kupolas.lt/kupolai.html</loc></url>
-  <url><loc>https://kupolas.lt/patirtys.html</loc></url>
-  <url><loc>https://kupolas.lt/dovanos.html</loc></url>
-  <url><loc>https://kupolas.lt/galerija.html</loc></url>
-  <url><loc>https://kupolas.lt/kontaktai.html</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/kupolai.html</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/patirtys.html</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/dovanos.html</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/galerija.html</loc></url>
+  <url><loc>https://alinadaugeliene-del.github.io/kupolas-demo/kontaktai.html</loc></url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kupolas.lt/sitemap.xml
+Sitemap: https://alinadaugeliene-del.github.io/kupolas-demo/sitemap.xml

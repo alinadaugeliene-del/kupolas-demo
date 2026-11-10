@@ -53,11 +53,21 @@
     ].join(" ");
   }
 
+  /* Nuotraukos aprašymas pagal artimiausią antraštę ar užrašą */
+  function altFor(host) {
+    const box = host.closest("figure, .card, .dome, .tile, .frame, .page-hero, .cta");
+    if (!box) return "Kupolas pušyne prie ežero";
+    const t = box.querySelector("figcaption, .frame__tag, h3, h2, h1");
+    const text = t ? t.textContent.trim() : "";
+    if (box.matches(".card, .dome")) return `Kupolas „${text}“ pušyne`;
+    return text ? `${text} — Kupolas` : "Kupolas pušyne prie ežero";
+  }
+
   /* Nuotrauka (Unsplash) su piešiniu kaip atsarginiu variantu */
   function buildScene(host) {
     if (host.dataset.img && !host.dataset.failed) {
       const img = new Image();
-      img.alt = host.dataset.alt || "";
+      img.alt = host.dataset.alt || altFor(host);
       img.decoding = "async";
       const ref = host.dataset.img;
       img.src = ref.startsWith("photo-")
