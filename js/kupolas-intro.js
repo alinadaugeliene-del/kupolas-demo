@@ -33,12 +33,22 @@
       .catch(function () { /* paliekame įprastą src */ });
   }
 
+  // „Gyvas“ sluoksnis: medžiai, ežeras, šviesa ir garai (js/kupolas-life.js)
+  var life = null;
   function onReady() {
     if (ready) return;
     ready = true;
     video.pause();
     video.classList.add('is-loaded');
     lastTime = -1;
+    if (!life && window.KupolasLife) {
+      life = window.KupolasLife(video);
+      if (life) {
+        video.after(life.canvas, life.steam);
+        video.classList.add('is-hidden');
+        life.canvas.classList.add('is-loaded');
+      }
+    }
   }
   video.addEventListener('loadeddata', onReady);
   video.addEventListener('canplay', onReady);
@@ -73,6 +83,7 @@
     prog += (target - prog) * 0.1;
     if (Math.abs(target - prog) < 0.0005) prog = target;
     render();
+    if (life) life.draw(performance.now() / 1000, video.currentTime);
   }
 
   window.addEventListener('scroll', readScroll, { passive: true });
