@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laisvos datos ir rezervacija — Kupolas glempingas, Molėtų r.</title>
+  <meta name="description" content="Pasitikrinkite laisvas datas ir kainą iškart. Glempingo kupolai su kubilu pušyne prie ežero, 1 val. nuo Vilniaus. Nemokamas atšaukimas iki 14 d.">
+  <meta property="og:title" content="Kupolas — laisvos datos ir rezervacija">
+  <meta property="og:image" content="images/kadras-05.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&subset=latin-ext&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Kupolas — pradžia">
+      <svg viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 21 A16 16 0 0 1 33 21 Z"/><path d="M6 21 L12 8 L17 21 L22 8 L28 21 M12 8 L22 8 M3 15 L31 15"/></svg>
+      <span>Kupolas</span>
+    </a>
+    <nav class="nav" aria-label="Pagrindinis meniu">
+      <a href="index.html">Pradžia</a>
+      <a href="kupolai.html">Kupolai</a>
+      <a href="patirtys.html">Patirtys</a>
+      <a href="dovanos.html">Dovanos</a>
+      <a href="galerija.html">Galerija</a>
+      <a href="kontaktai.html" aria-current="page">Kontaktai</a>
+      <a href="kontaktai.html#rezervacija" class="btn">Rezervuoti</a>
+    </nav>
+    <button class="burger" aria-label="Meniu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--short">
+    <div class="scene" data-scene="ember" data-seed="19" data-img="images/kadras-05.jpg" data-w="2000"></div>
+    <div class="wrap">
+      <span class="eyebrow reveal">Rezervacija</span>
+      <h1 class="reveal" data-delay="1">Laisvos <em>datos</em></h1>
+      <p class="lead reveal" data-delay="2">Pasirinkite kupolą ir datas — kainą matysite iškart. Mokėti dabar nereikia: patvirtinsime per 2 val. ir atsiųsime apmokėjimo nuorodą.</p>
+    </div>
+  </section>
+
+  <section class="section" id="rezervacija" style="padding-top:70px">
+    <div class="wrap">
+      <!-- KALENDORIUS -->
+      <div class="booking">
+        <div class="cal reveal" data-booking>
+          <div class="cal__top">
+            <div class="cal__domes" role="group" aria-label="Kupolas"></div>
+            <div class="cal__nav"><button type="button" data-prev aria-label="Ankstesnis mėnuo">←</button><button type="button" data-next aria-label="Kitas mėnuo">→</button></div>
+          </div>
+          <div class="cal__months"></div>
+          <div class="cal__legend">
+            <span><i style="background:rgba(232,226,212,.08)"></i>Laisva (kaina už naktį)</span>
+            <span><i style="background:var(--brass)"></i>Jūsų datos</span>
+            <span style="text-decoration:line-through">Užimta</span>
+          </div>
+        </div>
+
+        <aside class="summary reveal" data-delay="1">
+          <span class="eyebrow">Jūsų nakvynė</span>
+          <h3>„Žvaigždė“</h3>
+          <p class="summary__dates">Pasirinkite atvykimo dieną kalendoriuje</p>
+          <div class="summary__rows"></div>
+          <div class="summary__total"><span>Iš viso</span><b>—</b></div>
+          <p class="summary__note"></p>
+          <a href="#uzklausa" class="btn">Tęsti rezervaciją <span class="arrow">→</span></a>
+          <ul class="summary__perks">
+            <li>Nemokamas atšaukimas iki 14 d.</li>
+            <li>Pusryčiai ir malkos įskaičiuoti</li>
+            <li>−10 % užsisakius 3+ naktis</li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- FORMA -->
+      <div class="contact" id="uzklausa">
+        <div>
+          <span class="eyebrow reveal">Rezervacijos užklausa</span>
+          <h2 class="reveal" data-delay="1" style="margin-bottom:50px">Liko tik <em>kontaktai</em></h2>
+          <form class="form reveal" data-delay="2" data-name="rezervacija" novalidate>
+            <div class="field"><label for="vardas">Vardas</label><input id="vardas" name="vardas" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="telefonas">Telefonas</label><input id="telefonas" name="telefonas" type="tel" autocomplete="tel" placeholder="+370" required></div>
+            <div class="field field--full"><label for="pastas">El. paštas</label><input id="pastas" name="pastas" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="atvykimas">Atvykimas</label><input id="atvykimas" name="atvykimas" type="date" required></div>
+            <div class="field"><label for="isvykimas">Išvykimas</label><input id="isvykimas" name="isvykimas" type="date" required></div>
+            <div class="field">
+              <label for="kupolas">Kupolas</label>
+              <select id="kupolas" name="kupolas">
+                <option>Samanos</option>
+                <option>Pušis</option>
+                <option selected>Žvaigždė</option>
+                <option>Giria</option>
+                <option>Visa teritorija (komandai)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sveciai">Svečių skaičius</label>
+              <select id="sveciai" name="sveciai"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5–10</option></select>
+            </div>
+            <div class="field field--full">
+              <label for="paketas">Paketas</label>
+              <select id="paketas" name="paketas">
+                <option value="">Be paketo</option>
+                <option>Romantiškas savaitgalis</option>
+                <option>Piršlybos po žvaigždėmis</option>
+                <option>Ramybės pabėgimas</option>
+              </select>
+            </div>
+            <div class="field field--full"><label for="zinute">Pageidavimai</label><textarea id="zinute" name="zinute" placeholder="Kubilas, vakarienė, ypatinga proga, atvykimas su šunimi…"></textarea></div>
+            <button type="submit" class="btn">Siųsti užklausą <span class="arrow">→</span></button>
+            <div class="form__ok" role="status">
+              <h4>Ačiū! Užklausa gauta.</h4>
+              <p>Tai demo svetainė, todėl niekas nebuvo išsiųsta. Tikroje svetainėje patvirtintume datas per 2 val. ir atsiųstume apmokėjimo nuorodą.</p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="reveal" data-delay="1">
+          <div class="info-block"><h4>Greičiausiai — WhatsApp</h4><a href="https://wa.me/37060000000" target="_blank" rel="noopener">Parašyti žinutę →</a></div>
+          <div class="info-block"><h4>Telefonas</h4><a href="tel:+37060000000">+370 600 00000</a></div>
+          <div class="info-block"><h4>El. paštas</h4><a href="mailto:labas@kupolas.lt">labas@kupolas.lt</a></div>
+          <div class="info-block"><h4>Atvykimas / išvykimas</h4><p>Nuo 15:00 / iki 13:00</p></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAIP ATVYKTI -->
+  <section class="section section--moss">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow reveal">Kaip atvykti</span>
+          <h2 class="reveal" data-delay="1">Pušyno g. 1, <em>Molėtų r.</em></h2>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=55.233,25.418" target="_blank" rel="noopener" class="link reveal" data-delay="2">Atidaryti Google Maps <span>→</span></a>
+      </div>
+      <div class="split" style="align-items:start">
+        <div class="map reveal">
+          <iframe title="Kupolo vieta žemėlapyje" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=25.33%2C55.19%2C25.51%2C55.28&amp;layer=mapnik&amp;marker=55.233%2C25.418"></iframe>
+        </div>
+        <div class="route reveal" data-delay="1">
+          <div><h4>Iš Vilniaus · 1 val. 10 min.</h4><p>A14 kelias Utenos link, ties Molėtais sukite į Pušyno g. Paskutiniai 2 km — žvyrkelis, pravažiuojamas bet kokiu automobiliu.</p></div>
+          <div><h4>Iš Kauno · 1 val. 50 min.</h4><p>A1 iki Vilniaus aplinkkelio, toliau A14 Utenos link.</p></div>
+          <div><h4>Be automobilio</h4><p>Autobusu iki Molėtų autobusų stoties — pasitiksime (15 €, iš anksto susitarus).</p></div>
+          <div><h4>Parkavimas</h4><p>Nemokama aikštelė prie įvažiavimo, iki kupolų — 3 min. pėsčiomis miško taku. Bagažą pargabensime.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUK -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="justify-content:center;text-align:center">
+        <div>
+          <span class="eyebrow reveal">D.U.K.</span>
+          <h2 class="reveal" data-delay="1" style="margin:0 auto">Dažni <em>klausimai</em></h2>
+        </div>
+      </div>
+      <div class="faq reveal">
+        <details><summary>Kas įskaičiuota į kainą?</summary><p>Pusryčių krepšelis prie durų, malkos krosnelei, lino patalynė, rankšluosčiai, chalatai, kava ir arbata, parkavimas. „Pušies“ kupole — ir privatus kubilas. Kitos patirtys (kubilas, pirtis, vakarienė) užsakomos papildomai.</p></details>
+        <details><summary>Ar kupoluose šilta žiemą?</summary><p>Taip. Visi kupolai turi šildomas grindis, izoliuotas sienas ir malkinę krosnelę — viduje net per šalčius būna 21–23°C.</p></details>
+        <details><summary>Kiek naktų mažiausiai reikia užsisakyti?</summary><p>Darbo dienomis — viena naktis, savaitgaliais ir švenčių dienomis — dvi naktys. Užsisakius 3 ar daugiau naktų — 10 % nuolaida.</p></details>
+        <details><summary>Kaip ir kada mokama?</summary><p>Po užklausos atsiunčiame apmokėjimo nuorodą (banko pavedimas arba kortelė). Rezervacijai patvirtinti — 30 % avansas, likusi suma — likus 7 dienoms iki atvykimo.</p></details>
+        <details><summary>Kokios atšaukimo sąlygos?</summary><p>Nemokamai atšaukti galima likus 14 dienų iki atvykimo. Vėliau — datą galite perkelti per 6 mėnesius be papildomo mokesčio.</p></details>
+        <details><summary>Ar galima atvykti su šunimi?</summary><p>Augintiniai laukiami „Girios“ kupole (papildomai 20 € už naktį). Kituose kupoluose saugome alergiškų svečių ramybę.</p></details>
+        <details><summary>Ar yra elektra ir internetas?</summary><p>Elektra yra visur. Internetas — tik bendroje svečių namelio erdvėje, kad kupoluose būtų lengviau atsijungti.</p></details>
+        <details><summary>Ar galima išsinuomoti visą teritoriją?</summary><p>Taip — komandoms, gimtadieniams ar mažoms vestuvėms (iki 10 svečių nakvynei). Parašykite mums — atsiųsime individualų pasiūlymą.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="newsletter reveal">
+      <div>
+        <span class="eyebrow">Naujienlaiškis</span>
+        <h3>−10 % pirmajam užsakymui</h3>
+        <p>Kartą per mėnesį: laisvos datos, sezoniniai pasiūlymai ir nuolaidos tik prenumeratoriams.</p>
+      </div>
+      <form class="newsletter__form" novalidate>
+        <input type="email" name="email" placeholder="Jūsų el. paštas" aria-label="El. paštas" required>
+        <button type="submit" class="btn">Gauti nuolaidą</button>
+        <p class="newsletter__ok" role="status">Ačiū! Nuolaidos kodas jau keliauja į jūsų paštą (demo).</p>
+      </form>
+    </div>
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="logo"><svg viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 21 A16 16 0 0 1 33 21 Z"/><path d="M6 21 L12 8 L17 21 L22 8 L28 21 M12 8 L22 8 M3 15 L31 15"/></svg><span>Kupolas</span></a>
+        <p>Glempingas pušyne prie ežero. Keturi kupolai, vienas pušynas ir daug tylos.</p>
+      </div>
+      <div><h5>Svetainė</h5><ul><li><a href="kupolai.html">Kupolai ir kainos</a></li><li><a href="patirtys.html">Patirtys ir paketai</a></li><li><a href="dovanos.html">Dovanų kuponai</a></li><li><a href="galerija.html">Galerija</a></li><li><a href="kontaktai.html">Kontaktai</a></li></ul></div>
+      <div><h5>Kontaktai</h5><ul><li><a href="tel:+37060000000">+370 600 00000</a></li><li><a href="mailto:labas@kupolas.lt">labas@kupolas.lt</a></li><li>Pušyno g. 1, Molėtų r.</li><li>MB „Kupolas“, įm. k. 300000000</li></ul></div>
+      <div><h5>Sekite</h5><ul><li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li><li><a href="#" data-cookie-settings>Slapukų nustatymai</a></li></ul></div>
+    </div>
+    <div class="footer__word" aria-hidden="true">Kupolas</div>
+    <div class="footer__bottom"><span>© <span data-year></span> Kupolas. Demo svetainė.</span><span>Nuotraukos: Kupolas, <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
