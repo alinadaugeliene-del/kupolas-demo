@@ -21,6 +21,10 @@
     target = clamp(-r.top / total);
   }
 
+  // Telefone – mažesnis video (1,4 MB vietoj 3 MB); src nustatomas tik čia, kad nesikrautų abu
+  var isPhone = video.dataset.mobile && Math.min(window.innerWidth, screen.width) < 760;
+  video.setAttribute('src', isPhone ? video.dataset.mobile : (video.dataset.src || video.getAttribute('src')));
+
   // Visas video įkeliamas į atmintį – tada persukimas sklandus net be serverio „Range“ palaikymo
   if (window.fetch && location.protocol !== 'file:') {
     fetch(video.getAttribute('src'))
