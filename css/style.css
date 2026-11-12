@@ -262,20 +262,20 @@ p { margin: 0 0 1.1em; color: var(--bone-dim); }
 .hero .wrap { position: relative; z-index: 2; }
 
 /* ---------- 3D intro (slinkimu valdomas) ---------- */
-.kupolas-intro { position: relative; height: 420vh; background: #0b0d0c; }
+.kupolas-intro { position: relative; height: 520vh; background: #0b0d0c; }
 .kupolas-intro .kp-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; width: 100%; overflow: hidden;
   background: #0b0a10 url("../images/kupolas-poster.jpg") center / cover no-repeat; }
-.kupolas-intro .kp-video {
+/* kadrų seka ant drobės; spalvos jau įrašytos į kadrus, todėl CSS filtro nebereikia */
+.kupolas-intro .kp-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.9) brightness(0.88) contrast(1.04);
   opacity: 0;
-  transition: opacity 1s var(--ease);
+  transition: opacity 0.6s var(--ease);
 }
-.kupolas-intro .kp-video.is-loaded { opacity: 1; }
+.kupolas-intro.is-ready .kp-canvas { opacity: 1; }
 .kupolas-intro .kp-vignette {
   position: absolute; inset: 0; pointer-events: none;
   background:
@@ -755,6 +755,12 @@ p { margin: 0 0 1.1em; color: var(--bone-dim); }
 .kupolas-intro .kp-cap--lead .kp-title { font-size: clamp(2.6rem, 6vw, 5.4rem); }
 .kupolas-intro .kp-cap--lead .hero__actions { margin-top: 30px; }
 .kupolas-intro a.kp-hint { cursor: pointer; }
+/* paskutinis kadras: sustojimas su rezervacijos mygtuku */
+.kupolas-intro .kp-cap--final .hero__actions { margin-top: 30px; }
+.kupolas-intro .kp-cap--final .btn:first-child { padding: 19px 34px; font-size: 0.82rem; }
+.kupolas-intro .kp-perks {
+  margin: 22px 0 0; font-size: 0.78rem; letter-spacing: 0.08em; color: var(--bone-dim);
+}
 .kupolas-intro a.kp-hint:hover { color: var(--brass); }
 
 .page-hero--short { min-height: 58vh; }
@@ -987,6 +993,16 @@ p { margin: 0 0 1.1em; color: var(--bone-dim); }
   .mobile-bar .btn { flex: 1; justify-content: center; padding: 15px 10px; }
   body { padding-bottom: 0; }
   .footer { padding-bottom: 110px; }
+}
+
+/* ---------- greitis: telefone ir lietimui skirtuose ekranuose nuimame brangiausius efektus ---------- */
+@media (hover: none), (max-width: 760px) {
+  body::after { display: none; }                         /* grūdėtumo sluoksnis per visą ekraną */
+  .header.is-solid { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(11, 15, 12, 0.97); }
+  .mobile-bar { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(11, 15, 12, 0.98) !important; }
+  .frame__tag { backdrop-filter: none; background: rgba(11, 15, 12, 0.8); }
+  .scene > img { filter: none; }                          /* nuotraukų filtras – brangus slenkant */
+  .scene > img.is-loaded { opacity: 0.9; }
 }
 
 /* telefonas: kad niekas neišlįstų už ekrano */

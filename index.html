@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&subset=latin-ext&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,10 +66,10 @@
   <!-- HERO: video, valdomas slinkimu -->
   <section class="kupolas-intro" id="kupolas-intro">
     <div class="kp-sticky">
-      <video class="kp-video" data-src="images/kupolas.mp4" data-mobile="images/kupolas-mobile.mp4" poster="images/kupolas-poster.jpg" muted playsinline webkit-playsinline preload="auto" aria-label="Drono skrydis pro pušyną į jaukų kupolą"></video>
+      <canvas class="kp-canvas" data-frames="75" data-desktop="images/seka/d_" data-mobile="images/seka/m_" role="img" aria-label="Drono skrydis pro pušyną į jaukų kupolą"></canvas>
       <div class="kp-vignette"></div>
 
-      <div class="kp-cap kp-cap--lead" data-from="0" data-to="0.18">
+      <div class="kp-cap kp-cap--lead" data-from="0" data-to="0.15">
         <span class="eyebrow">Glempingas · Molėtų r. · 1 val. nuo Vilniaus</span>
         <h1 class="kp-title">Nakvynė kupole <em>Molėtų rajone</em></h1>
         <p class="kp-sub">Keturi šildomi kupolai pušyne prie ežero · nuo 180 € už naktį</p>
@@ -78,15 +78,15 @@
           <a href="kupolai.html" class="btn btn--ghost">Kupolai ir kainos</a>
         </div>
       </div>
-      <div class="kp-cap kp-right" data-from="0.28" data-to="0.5">
+      <div class="kp-cap kp-right" data-from="0.24" data-to="0.42">
         <span class="eyebrow">Vakaras</span>
         <h2 class="kp-title">Šviesa jau <em>dega.</em></h2>
       </div>
-      <div class="kp-cap" data-from="0.6" data-to="0.76">
+      <div class="kp-cap" data-from="0.5" data-to="0.64">
         <span class="eyebrow">Užeik</span>
         <h2 class="kp-title">Durys <em>atviros.</em></h2>
       </div>
-      <div class="kp-cap" data-from="0.86" data-to="1.01">
+      <div class="kp-cap kp-cap--final" data-from="0.72" data-to="1.01">
         <span class="eyebrow">Viduje</span>
         <h2 class="kp-title">Čia <em>jauku.</em></h2>
         <p class="kp-sub">Pasaulis lieka už stiklo.</p>
@@ -94,6 +94,7 @@
           <a href="kontaktai.html#rezervacija" class="btn">Rinktis datas ir kupolą <span class="arrow">→</span></a>
           <a href="kupolai.html" class="btn btn--ghost">Apžiūrėti kupolus</a>
         </div>
+        <p class="kp-perks">Nuo 180 € už naktį · Pusryčiai įskaičiuoti · Nemokamas atšaukimas iki 14 d.</p>
       </div>
 
       <a class="kp-hint" href="#turinys"><span>Slink · arba praleisk</span><i></i></a>
@@ -300,7 +301,7 @@
   </div>
 </footer>
 
-<script src="js/kupolas-intro.js?v=6"></script>
+<script src="js/kupolas-intro.js?v=8"></script>
 <script src="js/main.js?v=4"></script>
 </body>
 </html>
